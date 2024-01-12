@@ -45,15 +45,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: double.infinity,
                 height: 50,
                 child: TextButton(
-                  style: TextButton.styleFrom(
-                    textStyle: const TextStyle(fontSize: 20),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => loginPage()));
-                  },
-                  child: const Text('Log in'),
-                )),
+                      style: TextButton.styleFrom(
+                        textStyle: const TextStyle(fontSize: 20),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => const LoginPage()),
+                        );
+                      },
+                      child: const Text("Log in"),
+                )
+            ),
+
             SizedBox(
                 width: double.infinity,
                 height: 50,
@@ -63,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   onPressed: () {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => signupPage()));
+                        MaterialPageRoute(builder: (context) => SignUpPage()));
                   },
                   child: const Text('Sign up'),
                 )),
@@ -75,6 +78,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-
-
 }
