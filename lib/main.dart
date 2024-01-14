@@ -34,48 +34,49 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
-                width: double.infinity,
-                height: 50,
-                child: TextButton(
-                      style: TextButton.styleFrom(
-                        textStyle: const TextStyle(fontSize: 20),
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => const LoginPage()),
-                        );
-                      },
-                      child: const Text("Log in"),
-                )
-            ),
-
-            SizedBox(
-                width: double.infinity,
-                height: 50,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    textStyle: const TextStyle(fontSize: 20),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => SignUpPage()));
-                  },
-                  child: const Text('Sign up'),
-                )),
-            const SizedBox(
-              height: 30,
-            )
-          ],
-        ),
-      ),
-    );
+    return HomePage();
+    // return Scaffold(
+    //   backgroundColor: Colors.white,
+    //   body: Center(
+    //     child: Column(
+    //       mainAxisAlignment: MainAxisAlignment.end,
+    //       crossAxisAlignment: CrossAxisAlignment.center,
+    //       children: [
+    //         SizedBox(
+    //             width: double.infinity,
+    //             height: 50,
+    //             child: TextButton(
+    //                   style: TextButton.styleFrom(
+    //                     textStyle: const TextStyle(fontSize: 20),
+    //                   ),
+    //                   onPressed: () {
+    //                     Navigator.of(context).push(
+    //                       MaterialPageRoute(builder: (context) => const LoginPage()),
+    //                     );
+    //                   },
+    //                   child: const Text("Log in"),
+    //             )
+    //         ),
+    //
+    //         SizedBox(
+    //             width: double.infinity,
+    //             height: 50,
+    //             child: TextButton(
+    //               style: TextButton.styleFrom(
+    //                 textStyle: const TextStyle(fontSize: 20),
+    //               ),
+    //               onPressed: () {
+    //                 Navigator.of(context).push(
+    //                     MaterialPageRoute(builder: (context) => SignUpPage()));
+    //               },
+    //               child: const Text('Sign up'),
+    //             )),
+    //         const SizedBox(
+    //           height: 30,
+    //         )
+    //       ],
+    //     ),
+    //   ),
+    // );
   }
 }
